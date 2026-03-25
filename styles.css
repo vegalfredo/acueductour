@@ -132,10 +132,8 @@ header.scrolled .logo img { filter: none; }
 .logo img {
     height: 52px;
     width: auto;
-    filter: brightness(0) invert(1); /* blanco sobre hero oscuro */
     transition: filter var(--transition);
 }
-header.scrolled .logo img { filter: none; }
 
 .menu {
     list-style: none;
@@ -827,8 +825,6 @@ footer {
     height: 48px;
     width: auto;
     margin-bottom: 16px;
-    filter: brightness(0) invert(1);
-    opacity: .8;
 }
 .footer-logo p {
     font-size: .85rem;
