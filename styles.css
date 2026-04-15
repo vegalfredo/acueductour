@@ -806,6 +806,215 @@ header.scrolled .menu-toggle { color: var(--navy); }
 }
 
 /* =============================================
+   VIAJES A CDMX
+   ============================================= */
+.cdmx-section {
+    background: linear-gradient(160deg, var(--navy) 0%, #1a3a6b 60%, #0d2744 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cdmx-section::before {
+    content: 'CDMX';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10rem;
+    font-weight: 800;
+    color: rgba(255,255,255,.03);
+    pointer-events: none;
+    letter-spacing: .1em;
+}
+
+.cdmx-titulo {
+    color: var(--white) !important;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.cdmx-section .section-tag { color: var(--gold-light); }
+.cdmx-section .section-sub { color: rgba(255,255,255,.6); margin-bottom: 0; }
+
+/* Badge de precio */
+.cdmx-precio-badge {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 36px 0 48px;
+}
+.precio-desde {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.55);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+.precio-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--gold-light);
+    line-height: 1;
+    text-shadow: 0 0 40px rgba(232,181,90,.3);
+}
+.precio-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.55);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+/* Tarjetas de ruta */
+.cdmx-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 780px;
+    margin: 0 auto 40px;
+}
+
+.cdmx-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), background var(--transition);
+}
+.cdmx-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,.09);
+}
+
+.cdmx-card-header {
+    background: rgba(200,151,58,.15);
+    border-bottom: 1px solid rgba(200,151,58,.25);
+    padding: 14px 24px;
+}
+.cdmx-dir {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: .04em;
+}
+
+.cdmx-route {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cdmx-stop {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.cdmx-stop strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 2px;
+}
+.cdmx-stop span {
+    font-size: .83rem;
+    color: rgba(255,255,255,.55);
+}
+
+.stop-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+.stop-dot.origen  { background: var(--gold); box-shadow: 0 0 0 3px rgba(200,151,58,.3); }
+.stop-dot.destino { background: #4ade80;     box-shadow: 0 0 0 3px rgba(74,222,128,.3); }
+
+.route-line {
+    width: 2px;
+    height: 32px;
+    background: linear-gradient(to bottom, var(--gold), #4ade80);
+    margin: 6px 0 6px 6px;
+    border-radius: 2px;
+}
+
+/* Features */
+.cdmx-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin-bottom: 44px;
+}
+.cdmx-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .85rem;
+    color: rgba(255,255,255,.65);
+}
+.cdmx-feat span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* CTA */
+.cdmx-cta {
+    text-align: center;
+}
+.btn-cdmx {
+    font-size: 1rem !important;
+    padding: 16px 40px !important;
+    box-shadow: 0 6px 28px rgba(200,151,58,.5) !important;
+}
+.cdmx-nota {
+    margin-top: 14px;
+    font-size: .78rem;
+    color: rgba(255,255,255,.35);
+}
+
+@media (max-width: 640px) {
+    .cdmx-grid { grid-template-columns: 1fr; }
+    .precio-num { font-size: 3.2rem; }
+}
+
+/* =============================================
+   VIDEO PROMOCIONAL
+   ============================================= */
+.video-section h2 {
+    color: var(--navy);
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.video-section .section-sub {
+    margin-bottom: 40px;
+}
+
+.video-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(11,31,58,.18);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    background: var(--navy);
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 footer {

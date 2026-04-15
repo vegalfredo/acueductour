@@ -2,6 +2,10 @@
    ACUEDUCTOUR TRANSPORTE — script.js
    ============================================= */
 
+/* --- VIDEO: volumen bajo por defecto --- */
+const promoVideo = document.querySelector('#video video');
+if (promoVideo) promoVideo.volume = 0.1;
+
 /* --- NAVBAR: cambia estilo al hacer scroll --- */
 const header = document.getElementById('navbar');
 
@@ -33,7 +37,7 @@ menu.querySelectorAll('a').forEach(link => {
     if (!track) return;
 
     const slides    = track.querySelectorAll('.carousel-slide');
-    const total     = slides.length / 2; // mitad real, mitad duplicada para loop
+    const total     = slides.length;
     let current     = 0;
     let autoTimer;
 
