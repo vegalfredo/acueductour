@@ -325,6 +325,15 @@ header.scrolled .menu-toggle { color: var(--navy); }
     flex-shrink: 0;
 }
 
+/* Credenciales bajo las estadísticas del hero */
+.hero-credenciales {
+    margin-top: 18px;
+    font-size: .85rem;
+    color: var(--gold-light);
+    letter-spacing: .03em;
+    line-height: 1.6;
+}
+
 /* Scroll hint */
 .hero-scroll-hint {
     position: absolute;
