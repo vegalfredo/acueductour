@@ -31,14 +31,14 @@ Sitio de **una sola página (SPA estático)** sin framework ni bundler.
 ## Secciones de la página (en orden)
 
 1. **Navbar** fijo (`#navbar`) – enlaces ancla a todas las secciones
-2. **Hero** (`#inicio`) – `img_01.jpeg` de fondo, estadísticas animadas
+2. **Hero** (`#inicio`) – `img_01.jpeg` de fondo, estadísticas animadas (20+ años, 1,200+ viajes, 98%) y línea de credenciales (`.hero-credenciales`)
 3. **Diferenciadores** – banda oscura con 4 íconos
 4. **Quiénes Somos** (`#nosotros`) – imagen `img_02.jpeg` + texto
 5. **Servicios** (`#servicios`) – 3 tarjetas: Traslados Ejecutivos, Turismo, Eventos Privados
-6. **Viajes a CDMX** (`#cdmx`) – ruta Querétaro ↔ CDMX, precio $239 por persona
+6. **Viajes a CDMX** (`#cdmx`) – ruta Querétaro ↔ CDMX, precio $249 por persona + IVA
 7. **Flota / Carrusel** (`#flota`) – 14 imágenes locales (`img_01` – `img_14`)
 8. **Testimonios** (`#testimonios`)
-9. **Banner Cobertura** – destinos y CTA
+9. **Banner Cobertura** – ruta Querétaro–CDMX, próximamente GDL y S.L.P., + CTA
 10. **Contacto** (`#contacto`)
 11. **Video Promocional** (`#video`) – `video_promocional.mp4`, volumen inicial 10%
 12. **Footer** – Copyright 2026
@@ -46,11 +46,28 @@ Sitio de **una sola página (SPA estático)** sin framework ni bundler.
 
 ## Ruta CDMX (sección `#cdmx`)
 
-- **Precio:** $239 por persona
-- **Ida:** Sale de la Alameda de Querétaro a las 10:00 am → llega al Ángel de la Independencia, CDMX
-- **Regreso:** Sale del Ángel de la Independencia a las 3:00 pm → llega a la Alameda de Querétaro
+- **Precio:** $249 por persona + IVA (mostrado como "desde")
+- **Ida:** Sale de la Alameda de Querétaro a las 4:00 am → llega al Ángel de la Independencia, CDMX, a las 7:00 am
+- **Regreso:** Sale del Ángel de la Independencia a las 6:00 pm → llega a la Alameda de Querétaro entre 9:00 y 10:00 pm, según el tráfico
 - **Días:** Lunes a sábado
 - El botón de reserva abre WhatsApp con mensaje pre-llenado
+- ⚠️ Pendiente: el mensaje pre-llenado del enlace de WhatsApp todavía dice `%24239`; actualizar a $249
+
+## Credenciales y trayectoria
+
+Datos que aparecen en el hero y en Quiénes Somos — mantenerlos consistentes entre sí:
+
+- **Más de 20 años** de experiencia en transporte y turismo (contador del hero: `data-target="20"`)
+- **Premio Querétaro a la Excelencia Turística**
+- **Distintivo M**
+- **Círculo de Calidad Turística**
+- **Afiliados a SECTUR Federal**
+
+## Contenido de las tarjetas de Servicios
+
+- **Traslados Ejecutivos:** aeropuertos CDMX / AIFA / Querétaro / León / GDL / Puebla, entre otros
+- **Turismo en Querétaro:** Centro Histórico, La Peña de Bernal, Tequisquiapan (zona de viñedos), San Miguel de Allende
+- **Eventos Privados:** capacidad desde 1 a 1000 personas
 
 ## Datos de contacto
 
@@ -75,3 +92,6 @@ Sitio de **una sola página (SPA estático)** sin framework ni bundler.
 - Preferir soluciones simples y nativas (HTML/CSS/JS vanilla)
 - Al agregar secciones, seguir el patrón `<section id="..." class="section">`
 - Al agregar sección nueva, agregar también su enlace en el navbar y en el footer
+- Los años de experiencia aparecen en dos lugares (contador del hero y título de Quiénes Somos): al cambiarlos, actualizar ambos
+- Al cambiar el precio de CDMX, actualizar los tres lugares: badge, texto del botón y el mensaje pre-llenado del enlace de WhatsApp
+- El sitio se despliega automáticamente al hacer push a `main` (repo `vegalfredo/acueductour`)
