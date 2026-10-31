@@ -35,7 +35,7 @@ Sitio de **una sola página (SPA estático)** sin framework ni bundler.
 3. **Diferenciadores** – banda oscura con 4 íconos
 4. **Quiénes Somos** (`#nosotros`) – imagen `img_02.jpeg` + texto
 5. **Servicios** (`#servicios`) – 3 tarjetas: Traslados Ejecutivos, Turismo, Eventos Privados
-6. **Viajes a CDMX** (`#cdmx`) – ruta Querétaro ↔ CDMX, precio $299 por persona + IVA
+6. **Viajes a CDMX** (`#cdmx`) – ruta Querétaro ↔ CDMX, precio $349 por persona + IVA
 7. **Flota / Carrusel** (`#flota`) – 14 imágenes locales (`img_01` – `img_14`)
 8. **Testimonios** (`#testimonios`)
 9. **Banner Cobertura** – ruta Querétaro–CDMX, próximamente GDL y S.L.P., + CTA
@@ -46,11 +46,11 @@ Sitio de **una sola página (SPA estático)** sin framework ni bundler.
 
 ## Ruta CDMX (sección `#cdmx`)
 
-- **Precio:** $299 por persona + IVA (mostrado como "desde")
+- **Precio:** $349 por persona + IVA (mostrado como "desde")
 - **Ida:** Sale de la Alameda de Querétaro a las 4:00 am → llega al Ángel de la Independencia, CDMX, a las 7:00 am
 - **Regreso:** Sale del Ángel de la Independencia a las 6:00 pm → llega a la Alameda de Querétaro entre 9:00 y 10:00 pm, según el tráfico
 - **Días:** Lunes a sábado
-- El botón de reserva abre WhatsApp con mensaje pre-llenado (`%24299`)
+- El botón de reserva abre WhatsApp con mensaje pre-llenado (`%24349`)
 
 ## Credenciales y trayectoria
 
