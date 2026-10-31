@@ -56,6 +56,8 @@ menu.querySelectorAll('a').forEach(link => {
 
     function goTo(index) {
         current = index;
+        // Precarga la siguiente imagen para que no aparezca vacía al avanzar
+        slides[(index + 1) % total].querySelector('img').loading = 'eager';
         const offset = getSlideWidth() * current;
         const centerOffset = (track.parentElement.offsetWidth - slides[0].offsetWidth) / 2;
         track.style.transform = `translateX(calc(${centerOffset}px - ${offset}px))`;
@@ -90,7 +92,12 @@ menu.querySelectorAll('a').forEach(link => {
 
     // Init
     goTo(0);
-    startAuto();
+
+    // Autoavance solo con el carrusel en pantalla (si no, cargaría todas las imágenes)
+    new IntersectionObserver(([entry]) => {
+        clearInterval(autoTimer);
+        if (entry.isIntersecting) startAuto();
+    }).observe(track.parentElement);
 
     // Recalcular al redimensionar
     window.addEventListener('resize', () => goTo(current));

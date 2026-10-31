@@ -93,4 +93,6 @@ Datos que aparecen en el hero y en Quiénes Somos — mantenerlos consistentes e
 - Al agregar sección nueva, agregar también su enlace en el navbar y en el footer
 - Los años de experiencia aparecen en dos lugares (contador del hero y título de Quiénes Somos): al cambiarlos, actualizar ambos
 - Al cambiar el precio de CDMX, actualizar los cinco lugares: badge, texto del botón, mensaje pre-llenado del enlace de WhatsApp y las descripciones `og:description` / `twitter:description`
+- Nada debe bloquear el primer pintado (navegadores internos como el de WhatsApp en iPhone): Google Fonts se carga con `media="print" onload`, y las imágenes `<img>` llevan `loading="lazy"`
 - El sitio se despliega automáticamente al hacer push a `main` (repo `vegalfredo/acueductour`)
+- El dominio es `acueductourtransporte.com` (ver `CNAME`); usarlo en `og:url` y `og:image`, no el de `github.io`
